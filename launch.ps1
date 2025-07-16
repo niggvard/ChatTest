@@ -2,7 +2,7 @@
 $exePath = "$env:TEMP\chatclient.exe"
 
 # Завантаження base64-коду
-$exe64 = (Invoke-WebRequest "https://raw.githubusercontent.com/niggvard/ChatTest/refs/heads/main/chatclient.exe.b64?token=GHSAT0AAAAAADG26J2GGMZD63QVZ6E4HKSE2DXINLQ").Content
+$exe64 = (Invoke-WebRequest "https://raw.githubusercontent.com/niggvard/ChatTest/refs/heads/main/chatclient.exe.b64").Content
 
 # Декодування і запис в файл
 [IO.File]::WriteAllBytes($exePath, [Convert]::FromBase64String($exe64))
