@@ -5,7 +5,6 @@ from datetime import datetime, timedelta
 app = Flask(__name__)
 DB = 'chat.db'
 
-# Ініціалізація таблиці
 def init_db():
     with sqlite3.connect(DB) as conn:
         conn.execute('''
